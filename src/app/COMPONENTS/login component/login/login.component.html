@@ -1,0 +1,41 @@
+<!-- className-l : STD for login component -->
+<!-- inside main class created two class for left and right -->
+<!-- left -->
+<!-- 1 - added logo image with no class
+2 - added slogan under the class slogan -->
+<!-- right -->
+<!-- 1 - added two images and give trasnform properties (classes : dish-1,dish-2)-->
+
+  <div class="main-l"> <div class="left-l">
+    <img src="../../../../assets/login_page/logo.png" alt="">
+    <div class="slogan">
+      <h2>Your Culinary Adventure Awaits!</h2>
+    </div>
+  </div>
+  <div class="right-l">
+    <div class="dish-1">
+      <img src="../../../../assets/login_page/dish1.png" alt="">
+    </div>
+    <div class="dish-2">
+      <img src="../../../../assets/login_page/dish2.png" alt="">
+    </div>
+    <div class="dish-3">
+      <img src="../../../../assets/login_page/dish3.png" alt="">
+    </div>
+    <div class="form-l">
+      <div class="header">LOGIN
+        <i class="material-icons">login</i>
+      </div>
+      <div class="form">
+        <form action="">
+          <input #username type="text" placeholder="Username">
+          <input #password type="password" placeholder="Password">
+          <button (click)="GoToHome(username.value,password.value)">LOGIN</button>
+        </form>
+      </div>
+    </div>
+    <div *ngIf="Validate" class="error-msg">
+      <p>Invalid Credentials!</p>
+    </div>
+  </div>
+</div>
